@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int main() 
-{
+int main() {
     int age;
     bool with_parent;
     double money;
@@ -15,19 +14,11 @@ int main()
     cout << "Enter amount of money: ";
     cin >> money;
 
-	cout << "You can watch movies with ratings: ";
+    cout << "You can watch movies with ratings: ";
     if (age < 13) {
-        if (with_parent) {
-            cout << "G, PG";
-        } else {
-            cout << "G";
-        }
-	} else if (age >= 13 && age < 16) {
-        if (with_parent) {
-            cout << "G, PG, R";
-        } else {
-            cout << "G, PG";
-        }
+        cout << (with_parent ? "G, PG" : "G");
+    } else if (age < 16) {
+        cout << (with_parent ? "G, PG, R" : "G, PG");
     } else {
         cout << "G, PG, R";
     }
